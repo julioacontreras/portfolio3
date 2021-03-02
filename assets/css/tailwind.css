@@ -1,0 +1,87 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: "minimal";
+}
+
+@font-face {
+  font-family: "minimal";
+  src: url("../fonts/IBMPlexMono-Regular.ttf")
+}
+
+#canvas3D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas2D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@-webkit-keyframes blur-fadeout {
+  0% {
+    text-shadow: 0 0 0px white;
+    color: white;
+  }
+
+  30% {
+    text-shadow: 0 0 6px white;
+    color: transparent;
+  }
+
+  100% {
+    text-shadow: 0 0 6px white;
+    color: transparent;
+  }
+}
+
+@-webkit-keyframes blur-fadein {
+  0% {
+    text-shadow: 0 0 16px white;
+    color: transparent;
+  }
+
+  100% {
+    text-shadow: 0 0 0px white;
+    color: white;
+  }
+}
+
+.title-page {
+  animation-name: blur-fadein;
+  animation-duration: 3s;       
+}
+
+.link:hover {
+  animation-name: blur-fadeout;
+  animation-duration: 10s;      
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.grid-r3 {
+  grid-template-rows: 60px 1fr 60px;
+  height: 100vh;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #63e6f6, 0 0 70px #7bf8e9;
+}
