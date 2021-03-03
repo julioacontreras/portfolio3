@@ -3,12 +3,12 @@
     <div />
     <div class="w-full flex flex-col ">
       <div class="pt-64 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
-        <p class="text-center leading-normal text-2xl lg:text-5xl text-primary uppercase w-full lg:w-7/12">
+        <p class="text-center leading-normal text-2xl sm:text-4xl lg:text-5xl text-primary uppercase w-full lg:w-7/12">
           <pre class="title text-glow" />
         </p>
       </div>
     </div>
-    <div class="flex w-full justify-center text-secondary items-center uppercase">
+    <div class="flex w-full justify-center text-secondary items-center uppercase pb-12 sm:pb-0">
       <a class="font  lg:text-secondary link text-base lg:text-xl cursor-pointer" @click="about">
         About
       </a>

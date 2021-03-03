@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="absolute left-0 top-0 z-30 p-3" @click="toggleMusic">
+    <div class="absolute left-0 top-0 z-30 pt-6 sm:pt-3 px-3" @click="toggleMusic">
       <img v-if="isPlay" src="/img/sound.gif" class="w-3 h-3">
       <img v-if="!isPlay" src="/img/no-sound.gif" class="w-3 h-3">
     </div>
@@ -8,7 +8,7 @@
     <div class="absolute top-0 left-0 w-full h-screen z-10">
       <Monument />
     </div>
-    <div class="absolute top-0 left-0 w-full h-screen z-20">
+    <div class="absolute top-0 left-0 w-full z-20">
       <Home v-if="selected === 'home'" @click="show" />
       <About v-if="selected === 'about'" @click="show" />
       <Contact v-if="selected === 'contact'" @click="show" />
