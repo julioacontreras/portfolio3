@@ -4,7 +4,7 @@
       {{ title }}
     </div>
     <div class="w-full flex flex-col ">
-      <div class="pt-48 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
+      <div class="pt-32 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
         <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
           Hi! I am <span class="i-am" />
         </p>
@@ -30,7 +30,7 @@ export default {
   },
   mounted () {
     this.typed = new Typed('.i-am', {
-      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio Contreras. ^1000 I like to get involved in disruoptive projects and new technologies.'],
+      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio Contreras. ^1000 &nbsp; I like to get involved in disruoptive projects and new technologies.'],
       typeSpeed: 30,
       backSpeed: 100,
       backDelay: 900,

@@ -43,7 +43,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.$refs.music.play()
-    }, 1000)
+    }, 3000)
   },
   methods: {
     show (screen) {
