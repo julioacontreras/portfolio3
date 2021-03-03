@@ -4,7 +4,7 @@
       {{ title }}
     </div>
     <div class="w-full flex flex-col ">
-      <div class="pt-32 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
+      <div class="pt-48 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
         <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercase w-7/12">
           <a href="https://www.linkedin.com/in/julio-contreras-6579b623/">
             <span class="get-in-touch" />
