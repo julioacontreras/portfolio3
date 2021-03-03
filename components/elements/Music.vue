@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio ref="audio" autoplay class="invisible">
+    <audio ref="audio" class="invisible">
       <source :src="mp3" type="audio/mpeg">
     </audio>
   </div>

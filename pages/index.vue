@@ -36,14 +36,9 @@ export default {
   },
   data () {
     return {
-      isPlay: true,
+      isPlay: false,
       selected: 'home'
     }
-  },
-  mounted () {
-    setTimeout(() => {
-      this.$refs.music.play()
-    }, 3000)
   },
   methods: {
     show (screen) {
