@@ -4,9 +4,12 @@
       {{ title }}
     </div>
     <div class="w-full flex flex-col ">
-      <div class="pt-48 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
+      <div class="pt-48 lg:pt-132 flex flex-col justify-center content-center font-bold flex-wrap items-center text-lg">
         <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
           Hi! I am <span class="i-am" />
+        </p>
+        <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
+          <span class="what-i-like-to-do" />
         </p>
       </div>
     </div>
@@ -29,13 +32,25 @@ export default {
     }
   },
   mounted () {
+    const self = this
     this.typed = new Typed('.i-am', {
-      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio.^1000\nI like to get involved in disruoptive projects and new technologies.'],
+      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio.^1000'],
       typeSpeed: 30,
       backSpeed: 100,
       backDelay: 900,
       smartBackspace: true,
-      loop: false
+      loop: false,
+      showCursor: false,
+      onComplete: () => {
+        self.typed = new Typed('.what-i-like-to-do', {
+          strings: ['I like to get involved in disruoptive projects and new technologies.'],
+          typeSpeed: 30,
+          backSpeed: 100,
+          backDelay: 900,
+          smartBackspace: true,
+          loop: false
+        })
+      }
     })
   },
   methods: {
