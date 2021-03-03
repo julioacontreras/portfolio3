@@ -30,7 +30,7 @@ export default {
   },
   mounted () {
     this.typed = new Typed('.i-am', {
-      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio. ^1000 &nbsp; I like to get involved in disruoptive projects and new technologies.'],
+      strings: ['programmer', 'designer ^10', 'entrepreneur ^10', 'god! :) ^10', 'Julio.^1000\nI like to get involved in disruoptive projects and new technologies.'],
       typeSpeed: 30,
       backSpeed: 100,
       backDelay: 900,

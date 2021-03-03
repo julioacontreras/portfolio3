@@ -32,7 +32,7 @@ export default {
   },
   mounted () {
     this.typed = new Typed('.get-in-touch', {
-      strings: ['Get in touch! ^100', 'Loading... ^10', 'Click here! ^500'],
+      strings: ['Get in touch!^100', 'Loading...^10', 'Click here!^500'],
       typeSpeed: 30,
       backSpeed: 100,
       smartBackspace: true,
