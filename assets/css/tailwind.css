@@ -64,7 +64,7 @@ body {
   animation-duration: 3s;       
 }
 
-.link:hover {
+.link-selected {
   animation-name: blur-fadeout;
   animation-duration: 10s;      
 }

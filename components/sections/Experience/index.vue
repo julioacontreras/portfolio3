@@ -16,28 +16,51 @@
     </div>
     <div class="flex flex-col lg:hidden w-full justify-center text-secondary items-center uppercase mb-56 sm:mb-0">
       <div class="flex w-full justify-center">
-        <a class="font text-secondary link text-xs cursor-pointer" @click="selected=0">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          :class="{'link-selected': selected === 0}"
+          @click="selected=0"
+        >
           Inspiration
         </a>
         <span class="mx-2"> | </span>
-        <a class="font text-secondary link text-xs cursor-pointer" @click="selected=1">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          :class="{'link-selected': selected === 1}"
+          @click="selected=1"
+        >
           Concept &amp; Art
         </a>
         <span class="mx-2"> | </span>
-        <a class="font text-secondary link text-xs cursor-pointer" @click="selected=2">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          :class="{'link-selected': selected === 2}"
+          @click="selected=2"
+        >
           Frontend
         </a>
       </div>
       <div class="flex w-full justify-center">
-        <a class="font text-secondary link text-xs cursor-pointer" @click="selected=3">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          :class="{'link-selected': selected === 3}"
+          @click="selected=3"
+        >
           Backend
         </a>
         <span class="mx-2"> | </span>
-        <a class="font text-secondary link text-xs cursor-pointer" @click="selected=4">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          :class="{'link-selected': selected === 4}"
+          @click="selected=4"
+        >
           System
         </a>
         <span class="mx-2"> | </span>
-        <a class="font text-secondary link text-xs cursor-pointer" @click="back">
+        <a
+          class="font text-secondary link text-xs cursor-pointer"
+          @click="back"
+        >
           Back
         </a>
       </div>
