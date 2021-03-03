@@ -46,10 +46,10 @@ class Monument {
   }
 
   resize (width) {
-    if (width <= 1000) {
-      this.mesh.position.z = 3
-      this.mesh.position.x = -0.25
-      this.mesh.position.y = 0.5
+    if (width <= 500) {
+      this.mesh.position.z = 3.45
+      this.mesh.position.x = 0
+      this.mesh.position.y = 0.1
     } else {
       this.mesh.position.x = 0
       this.mesh.position.y = 0

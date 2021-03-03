@@ -40,6 +40,11 @@ export default {
       selected: 'home'
     }
   },
+  mounted () {
+    setTimeout(() => {
+      this.$refs.music.play()
+    }, 1000)
+  },
   methods: {
     show (screen) {
       this.selected = screen

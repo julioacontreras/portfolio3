@@ -1,9 +1,10 @@
 import * as THREE from 'three'
 
 class Scene {
-  constructor () {
+  constructor (screen) {
     this.THREE = THREE
     this.scene = new THREE.Scene()
+    this.screen = screen
     this.init()
   }
 
@@ -19,7 +20,7 @@ class Scene {
   }
 
   initCamera () {
-    this.camera = new this.THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+    this.camera = new this.THREE.PerspectiveCamera(90, this.screen.w() / this.screen.h(), 0.1, 1000)
     this.camera.position.z = 5
   }
 

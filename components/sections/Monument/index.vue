@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- eslint-disable -->
-    <div id="canvas3D"></div>
+    <div id="canvas3D" class="h-screen"></div>
     <script id="fragmentShader" type="x-shader/x-fragment">
       uniform float time;
       uniform float fogDensity;
@@ -55,6 +55,7 @@
 <script>
 import * as THREE from 'three'
 
+import Screen from './js/screen'
 import Scene from './js/scene'
 import Monument from './js/objects/monument'
 import Render from './js/renders/render'
@@ -66,8 +67,8 @@ require('~/plugins/utils/resize.js')
 export default {
   mounted () {
     this.$vars = {}
-    this.$vars.mouse = new THREE.Vector2()
 
+    this.$vars.screen = new Screen('canvas3D')
     this.initScene()
     this.initRender()
     this.initObjects()
@@ -75,10 +76,10 @@ export default {
   },
   methods: {
     initScene () {
-      this.$vars.scene = new Scene()
+      this.$vars.scene = new Scene(this.$vars.screen)
     },
     initRender () {
-      this.$vars.render = new Render()
+      this.$vars.render = new Render(this.$vars.screen)
       this.$vars.render.renderer.autoClear = false
       this.$vars.render.renderer.setClearColor(0x090418)
       this.$vars.effects = new Effects(this.$vars.render, this.$vars.scene)
@@ -92,14 +93,6 @@ export default {
     initInteractions () {
       const self = this
 
-      // mousemove on screen
-      document.addEventListener('mousemove', (event) => {
-        event.preventDefault()
-        self.$vars.mouse.x = (event.clientX / window.innerWidth) * 2 - 1
-        self.$vars.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
-        self.$vars.monument.acumulateForces(self.$vars.mouse.x, self.$vars.mouse.y)
-      }, false)
-
       // click anywhere on screen
       document.addEventListener('click', (e) => {
         self.$vars.effects.glitchPass.enabled = true
@@ -110,11 +103,11 @@ export default {
 
       // resize screen
       const onWindowResize = () => {
-        self.$vars.scene.camera.aspect = window.innerWidth / window.innerHeight
+        self.$vars.scene.camera.aspect = this.$vars.screen.w() / this.$vars.screen.h()
         self.$vars.scene.camera.updateProjectionMatrix()
-        self.$vars.render.renderer.setSize(window.innerWidth, window.innerHeight)
-        self.$vars.effects.composer.setSize(window.innerWidth, window.innerHeight)
-        self.$vars.monument.resize(window.innerWidth)
+        self.$vars.render.renderer.setSize(this.$vars.screen.w(), this.$vars.screen.h())
+        self.$vars.effects.composer.setSize(this.$vars.screen.w(), this.$vars.screen.h())
+        self.$vars.monument.resize(this.$vars.screen.w())
       }
       onWindowResize()
       window.addEventListener('optimizedResize', onWindowResize)

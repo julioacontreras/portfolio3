@@ -1,10 +1,11 @@
 import * as THREE from 'three'
 
 class Render {
-  constructor () {
-    this.renderer = new THREE.WebGLRenderer({ antialias: true })
+  constructor (screen) {
+    this.renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false })
     this.renderer.setPixelRatio(window.devicePixelRatio)
-    document.getElementById('canvas3D').appendChild(this.renderer.domElement)
+    this.renderer.debug.checkShaderErrors = false
+    screen.canvas.appendChild(this.renderer.domElement)
   }
 
   render () {
