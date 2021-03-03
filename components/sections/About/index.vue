@@ -9,7 +9,13 @@
           Hi! I am <span class="i-am" />
         </p>
         <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
-          <span class="what-i-like-to-do" />
+          <span class="what-i-like-to-do-1" />
+        </p>
+        <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
+          <span class="what-i-like-to-do-2" />
+        </p>
+        <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercasew-full lg:w-7/12 limit-box">
+          <span class="what-i-like-to-do-3" />
         </p>
       </div>
     </div>
@@ -42,13 +48,31 @@ export default {
       loop: false,
       showCursor: false,
       onComplete: () => {
-        self.typed = new Typed('.what-i-like-to-do', {
-          strings: ['I like to get involved in disruoptive projects and new technologies.'],
+        self.typed = new Typed('.what-i-like-to-do-1', {
+          strings: ['More than years creating'],
           typeSpeed: 30,
           backSpeed: 100,
           backDelay: 900,
           smartBackspace: true,
-          loop: false
+          showCursor: false,
+          loop: false,
+          onComplete: () => {
+            self.typed = new Typed('.what-i-like-to-do-2', {
+              strings: ['technologies'],
+              typeSpeed: 30,
+              backSpeed: 100,
+              showCursor: false,
+              loop: false,
+              onComplete: () => {
+                self.typed = new Typed('.what-i-like-to-do-3', {
+                  strings: ['around the world.'],
+                  typeSpeed: 30,
+                  backSpeed: 100,
+                  loop: false
+                })
+              }
+            })
+          }
         })
       }
     })
