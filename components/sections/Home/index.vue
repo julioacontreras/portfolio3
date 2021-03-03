@@ -8,7 +8,7 @@
         </p>
       </div>
     </div>
-    <div class="flex w-full justify-center text-secondary items-center uppercase pb-20 sm:pb-0">
+    <div class="flex w-full justify-center text-secondary items-center uppercase mb-56 sm:mb-0">
       <a class="font  lg:text-secondary link text-base lg:text-xl cursor-pointer" @click="about">
         About
       </a>
