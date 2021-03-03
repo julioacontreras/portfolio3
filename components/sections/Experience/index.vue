@@ -4,7 +4,7 @@
       {{ title }}
     </div>
     <div class="w-full flex flex-col ">
-      <div class="pt-48 lg:pt-128 flex justify-center content-center font-bold flex-wrap items-center text-lg">
+      <div class="pt-48 lg:pt-132 flex justify-center content-center font-bold flex-wrap items-center text-lg">
         <p class="text-center leading-normal text-primary text-xl text-glow lg:text-4xl uppercase w-full lg:w-7/12">
           <List v-show="selected === 0" v-bind="inspiration" />
           <List v-show="selected === 1" v-bind="concept" />
@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col lg:hidden w-full justify-center text-secondary items-center uppercase">
+    <div class="flex flex-col lg:hidden w-full justify-center text-secondary items-center uppercase mb-56 sm:mb-0">
       <div class="flex w-full justify-center">
         <a class="font text-secondary link text-xs cursor-pointer" @click="selected=0">
           Inspiration
